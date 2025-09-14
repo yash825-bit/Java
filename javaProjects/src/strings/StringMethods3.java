@@ -1,6 +1,8 @@
+package strings;
+
 public class StringMethods3 {
     public static void main(String[] args){
-        //both strings have same content
+        //both strings.strings have same content
 //        String str1 = "Java";//SCP object
 //        String str2 = new String("Java");//a Heap object
 //
@@ -13,9 +15,9 @@ public class StringMethods3 {
 //        String str1 = "java";
 //        String str2 = "JAVA";
 
-//        System.out.println(str1.equalsIgnoreCase(str2));//checks by ignoring the case of both the strings
+//        System.out.println(str1.equalsIgnoreCase(str2));//checks by ignoring the case of both the strings.strings
 //        System.out.println(str2.compareTo(str1));
-        /*compares strings lexicographically(dictionary)that which string comes
+        /*compares strings.strings lexicographically(dictionary)that which string comes
         first by comparing them according to the order of the characters in that string dictionarily
         str1 > str2 (positive integer)
         str1 < str2 (negative integer)
@@ -28,7 +30,7 @@ public class StringMethods3 {
 
         String sentence2 = ", nothing just having fun while learning java";
         System.out.println(sentence.concat(sentence2));
-        //.concat() --> used to concatenate two strings it'll generate a new string object that contains concatenated string;
+        //.concat() --> used to concatenate two strings.strings it'll generate a new string object that contains concatenated string;
         String exp = String.valueOf(33);
         String exp2 = " is an integer";
         System.out.println(exp);

@@ -1,0 +1,148 @@
+📘 Regular Expression Formulation (Java Edition)
+
+⚠️ Reminder: In Java string literals, you must escape backslashes (\d → "\\d", \w → "\\w", etc.).
+
+1️⃣ Character Classes (What to Match)
+
+. → Any char (except newline by default)
+
+\d → Digit (0-9)
+
+\D → Non-digit
+
+\w → Word char (a-z, A-Z, 0-9, _)
+
+\W → Non-word char
+
+\s → Whitespace (space, tab, \n, \r, \f)
+
+\S → Non-whitespace
+
+Custom sets:
+
+[abc] → a, b, or c
+
+[^abc] → Not a, b, or c
+
+[a-z] → Any lowercase letter
+
+[A-Z] → Any uppercase letter
+
+[0-9] → Digit range
+
+[a-zA-Z0-9._-] → Allowed characters in emails/usernames
+
+2️⃣ Quantifiers (How Many)
+
+* → 0 or more
+
++ → 1 or more
+
+? → 0 or 1
+
+{n} → Exactly n
+
+{n,} → n or more
+
+{n,m} → Between n and m
+
+Examples:
+
+\d+ → one or more digits
+
+[A-Z]{2,4} → 2 to 4 uppercase letters
+
+3️⃣ Anchors & Boundaries
+
+^ → Start of string
+
+$ → End of string
+
+\b → Word boundary
+
+\B → Not a word boundary
+
+Examples:
+
+^Hello → matches “Hello world” but not “Say Hello”
+
+\bcat\b → matches “cat” but not “category”
+
+4️⃣ Groups & Alternation
+
+(abc) → Capturing group
+
+(?:abc) → Non-capturing group
+
+a|b → a OR b
+
+Examples:
+
+(Mr|Mrs|Dr)\. [A-Z][a-z]+ → “Mr. John”, “Mrs. Smith”
+
+(\\d{2})/(\\d{2})/(\\d{4}) → captures day, month, year
+
+5️⃣ Lookarounds (Zero-width Assertions)
+
+(?=...) → Positive lookahead (must be followed by …)
+
+(?!...) → Negative lookahead (must not be followed by …)
+
+(?<=...) → Positive lookbehind (must be preceded by …)
+
+(?<!...) → Negative lookbehind (must not be preceded by …)
+
+Examples:
+
+\d+(?=kg) → digits followed by “kg”
+
+(?<=USD)\d+ → digits preceded by “USD”
+
+⚠️ Java regex: Lookbehind must be fixed length.
+
+6️⃣ Escaping Special Characters
+
+Special chars: . ^ $ * + ? ( ) [ ] { } | \
+To match literally → escape with \\.
+Example: "\\." matches a literal dot.
+
+7️⃣ Flags / Modes
+
+Pattern.CASE_INSENSITIVE → ignore case
+
+Pattern.MULTILINE → ^ and $ apply per line
+
+Pattern.DOTALL → . matches newline too
+
+Inline flags:
+
+(?i) → case-insensitive
+
+(?m) → multiline
+
+(?s) → dotall
+
+Example: (?i)hello → matches “HELLO”, “Hello”, “hElLo”
+
+8️⃣ Backreferences
+
+Inside regex: \1, \2 … → refer to earlier capturing groups
+
+In replacement strings.strings: $1, $2
+
+Example (swap first/last name):
+
+"John Doe".replaceAll("(\\w+) (\\w+)", "$2, $1");
+// Output: Doe, John
+
+9️⃣ Common Regex Patterns
+
+Email → ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$
+
+Phone (India) → ^(\\+91)?[6-9]\\d{9}$
+
+Date (DD/MM/YYYY) → ^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\\d{4}$
+
+Strong Password → ^(?=\\S+$)(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$
+
+IP Address → ^((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)$

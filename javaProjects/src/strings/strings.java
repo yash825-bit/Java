@@ -1,3 +1,5 @@
+package strings;
+
 class student {
     String name;
     int age;

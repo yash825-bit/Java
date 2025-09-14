@@ -1,3 +1,5 @@
+package maths;
+
 import java.util.*;
 
 public class cuboid {
@@ -18,8 +20,8 @@ public class cuboid {
         volumeOfCuboid = length * breadth * height;
         perimeterOfCuboid = 2 * length + 2 *breadth;
 
-        System.out.println("Total area of cuboid: " + totalAreaOfCuboid);
-        System.out.println("Volume of cuboid: " + volumeOfCuboid);
-        System.out.println("Perimeter of cuboid: " + perimeterOfCuboid);
+        System.out.println("Total area of maths.cuboid: " + totalAreaOfCuboid);
+        System.out.println("Volume of maths.cuboid: " + volumeOfCuboid);
+        System.out.println("Perimeter of maths.cuboid: " + perimeterOfCuboid);
     }
 }

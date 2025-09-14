@@ -1,3 +1,5 @@
+package maths;
+
 import java.util.*;
 
 public class areaOfTriangle {

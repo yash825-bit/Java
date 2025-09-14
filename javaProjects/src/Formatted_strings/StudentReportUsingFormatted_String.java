@@ -1,3 +1,5 @@
+package Formatted_strings;
+
 import java.util.Scanner;
 
 public class StudentReportUsingFormatted_String {

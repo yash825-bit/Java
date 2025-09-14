@@ -1,3 +1,5 @@
+package Formatted_strings;
+
 import java.util.Scanner;
 
 public class reportGenerator {
@@ -26,7 +28,7 @@ public class reportGenerator {
         boolean passAllSubjects = englishMarks >= 40 && mathsMarks >= 40 && scienceMarks >= 40 && computerMarks >= 40;
         boolean paSS = passAllSubjects && totalPercentage >= 40.0;
 
-        // per-subject grade (strings, supports "A+", "O", etc.)
+        // per-subject grade (strings.strings, supports "A+", "O", etc.)
         String gradeEnglish = gradeForMark(englishMarks);
         String gradeMaths   = gradeForMark(mathsMarks);
         String gradeScience = gradeForMark(scienceMarks);

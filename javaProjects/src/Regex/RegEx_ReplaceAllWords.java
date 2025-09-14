@@ -1,4 +1,4 @@
-import java.util.regex.*;
+package Regex;
 
 public class RegEx_ReplaceAllWords {
     public static void main(String[] args){

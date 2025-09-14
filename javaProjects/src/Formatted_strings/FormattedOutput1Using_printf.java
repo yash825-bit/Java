@@ -1,3 +1,5 @@
+package Formatted_strings;
+
 import java.util.Scanner;
 
 public class FormattedOutput1Using_printf {
@@ -25,7 +27,7 @@ public class FormattedOutput1Using_printf {
         *               %x(for hexadecimal conversion);
         *   floating point value = %f(for floating point numbers),  %e and %g(for scientific conversion of any floating point
         *   numbers)
-        *   strings = %s;
+        *   strings.strings = %s;
          */
     }
 }

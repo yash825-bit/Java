@@ -1,3 +1,5 @@
+package bits;
+
 import java.util.Scanner;
 
 public class Swap {
